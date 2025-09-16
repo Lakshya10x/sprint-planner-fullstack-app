@@ -1,0 +1,12 @@
+# Backend (Maven/Gradle)
+target/
+*.log
+
+# Frontend (Node.js)
+node_modules/
+build/
+dist/
+
+# Common
+.DS_Store
+.env

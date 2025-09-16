@@ -1,0 +1,464 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f5f7;
+  color: #172b4d;
+}
+
+/* Generic container */
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* ===== HEADER (Bootstrap Navbar override) ===== */
+.custom-navbar {
+  background-color: #0747a6 !important; /* Jira dark blue */
+  padding: 0.7rem 1.2rem;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;   /* Bigger title */
+  font-weight: 700;    /* Bold */
+  color: #fff !important;
+  letter-spacing: 0.5px;
+  padding: .5%;
+}
+
+.custom-navbar .nav-link {
+  color: #ffffffcc !important; /* semi-transparent white */
+  font-size: 15px;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+/* Keep right aligned */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Toggler (mobile view) */
+.navbar-toggler {
+  border: none;
+  background-color: #ffffff33;
+  border-radius: 4px;
+  padding: 0.4rem;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* make hamburger white */
+}
+
+
+/* ===== Welcome Page Styling ===== */
+.welcome-page {
+  background: #f9fbfd; /* light neutral background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  margin: auto;
+}
+
+.welcome-page h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0747a6; /* Jira dark blue */
+}
+
+.welcome-page .lead {
+  font-size: 18px;
+  color: #555;
+}
+
+.welcome-page .btn-primary {
+  background-color: #0747a6;  /* dark blue button */
+  border-color: #0747a6;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.welcome-page .btn-primary:hover {
+  background-color: #053b84;
+  transform: translateY(-2px);
+}
+
+
+/* ====== LOGIN FORM ====== */
+/* Center the login form */
+.login-page,
+.register-page {  /* Added register-page for consistency */
+  height: 80vh;
+  background: #f4f5f7; /* Atlassian light gray */
+}
+
+/* Card styling */
+.login-card {
+  width: 400px;
+  background: white;
+  border: 1px solid #dfe1e6;
+}
+
+/* Heading */
+.login-card h2 {
+  font-weight: 600;
+  color: #0747a6; /* Atlassian blue */
+}
+
+/* Input fields */
+.login-card .form-control {
+  border-radius: 6px;
+  border: 1px solid #dfe1e6;
+  padding: 10px;
+}
+
+/* Button */
+.login-card .btn-primary {
+  background-color: #0052cc;
+  border-color: #0052cc;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.login-card .btn-primary:hover {
+  background-color: #0747a6;
+  border-color: #0747a6;
+}
+
+/* Alerts */
+.alert {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #172b4d; /* Jira dark text */
+  margin: 20px 0;
+}
+
+/* ===== TABLE STYLE (Jira-like issue list) ===== */
+.custom-sprint-table {
+  border-collapse: separate;
+  border-spacing: 0 8px; /* gap between rows */
+  width: 100%;
+}
+
+.custom-sprint-table thead th {
+  background-color: #f4f5f7; /* Jira light gray */
+  color: #172b4d;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #dfe1e6;
+}
+
+.custom-sprint-table tbody tr {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(9, 30, 66, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-sprint-table tbody tr:hover {
+  background: #f4f5f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(9, 30, 66, 0.15);
+}
+
+.custom-sprint-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #172b4d;
+  border: none;
+}
+
+/* ===== STATUS PILL ===== */
+.status-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-pill.pending {
+  background-color: #ffebe6;
+  color: #de350b; /* red */
+}
+
+.status-pill.done {
+  background-color: #e3fcef;
+  color: #006644; /* green */
+}
+
+
+
+
+/* ====== FOOTER ====== */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #f4f5f7;
+  border-top: 1px solid #dfe1e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #172b4d;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 1000;
+}
+
+/* ===== ERROR PAGE ===== */
+.error-page {
+  text-align: center;
+  margin-top: 80px;
+  padding: 40px 20px;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error-page h1 {
+  font-size: 5rem;
+  color: #d9534f; /* bootstrap red */
+  margin-bottom: 10px;
+}
+
+.error-page h2 {
+  font-size: 1.8rem;
+  color: #0747a6; /* Jira blue */
+  margin-bottom: 15px;
+}
+
+.error-page p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.error-page .home-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0747a6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.error-page .home-link:hover {
+  background-color: #053b80;
+}
+
+
+/* ===== LOGOUT PAGE ===== */
+.logout-page {
+  text-align: center;
+  margin-top: 80px;
+  padding: 40px 20px;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logout-page h1 {
+  font-size: 2rem;
+  color: #0747a6; /* Jira blue */
+  margin-bottom: 15px;
+}
+
+.logout-page p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.logout-page .login-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0747a6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-page .login-link:hover {
+  background-color: #053b80;
+}
+/* Sprint form container */
+.sprint-form-container {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Card style (same feel as sprint list rows) */
+.sprint-form-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(9, 30, 66, 0.1);
+}
+
+/* Form fields */
+.sprint-form-card .form-group {
+  margin-bottom: 18px;
+}
+
+.sprint-form-card label {
+  font-weight: 600;
+  color: #0747a6;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.sprint-form-card .form-control {
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sprint-form-card .form-control:focus {
+  border-color: #0747a6;
+  box-shadow: 0 0 4px rgba(7, 71, 166, 0.25);
+}
+
+.sprint-form-card .form-control.is-invalid {
+  border-color: #de350b;
+  box-shadow: 0 0 4px rgba(222, 53, 11, 0.2);
+}
+
+.invalid-feedback {
+  color: #de350b;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Checkbox styling */
+.checkbox-group label {
+  font-size: 14px;
+  color: #172b4d;
+  font-weight: 500;
+}
+
+/* Buttons */
+.form-actions {
+  text-align: right;
+}
+
+.form-actions .btn-success {
+  background-color: #0052cc;
+  border-color: #0052cc;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 6px;
+}
+
+.form-actions .btn-success:hover {
+  background-color: #0747a6;
+  border-color: #0747a6;
+}
+
+/* Additional styles for landing/register page consistency */
+.login-link {
+  color: #0052cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #0747a6;
+}
+
+/* Using Atlassian Design System colors and fonts for a consistent feel */
+:root {
+  --atlassian-blue: #0052CC;
+  --atlassian-text: #172B4D;
+  --atlassian-text-subtle: #5E6C84;
+  --atlassian-border: #DFE1E6;
+  --atlassian-bg-light: #F4F5F7;
+  --atlassian-bg-hover: #EBECF0;
+}
+
+.app-header {
+  background-color: #fff;
+  border-bottom: 1px solid var(--atlassian-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  padding: 0 1.5rem; /* Add horizontal padding */
+}
+
+/* Brand/Logo Styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between logo and text */
+  padding: 0.5rem 0;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--atlassian-text);
+}
+
+/* General Navigation Link Styling */
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--atlassian-text-subtle) !important;
+  padding: 0.5rem 0.8rem !important;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin: 0 0.2rem;
+}
+
+.nav-link:hover {
+  background-color: var(--atlassian-bg-hover);
+  color: var(--atlassian-text) !important;
+}
+
+/* Style for the currently active NavLink */
+.nav-link.active {
+  color: var(--atlassian-blue) !important;
+  background-color: #E9F2FF; /* A light blue to indicate active state */
+}
+
+/* Specific styling for the logout link to differentiate it */
+.logout-link {
+  color: var(--atlassian-text-subtle) !important;
+}
+
+.logout-link:hover {
+  background-color: #FFEBE6; /* Subtle red for a destructive action */
+  color: #DE350B !important;
+}
+
+/* Mobile Toggler Styling */
+.navbar-toggler {
+  border: 1px solid var(--atlassian-border);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px var(--atlassian-blue);
+}
